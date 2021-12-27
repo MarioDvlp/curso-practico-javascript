@@ -1,12 +1,4 @@
-//Codigo del cuadrado
-
-console.group("Cuadrado");
-// const ladoCuadrado = 8;
-// console.log("Los lados del cuadrado miden: " + ladoCuadrado + " in");
-// const perimetroCuadrado = ladoCuadrado * 4;
-// console.log("El perimetro del cuadrado es: " + perimetroCuadrado + " in");
-// const areaCuadrado = ladoCuadrado * ladoCuadrado;
-// console.log("El area del cuadrado es: " + areaCuadrado + " in^2");
+//Codigo del cuadrado=======================================
 
 function perimetroCuadrado(lado){
     return lado *4;
@@ -15,67 +7,84 @@ function areaCuadrado(lado){
     return lado * lado;
 }
 
-console.groupEnd();
-
-//Codigo del triangulo
-
-console.group("Triangulo");
-// const ladoTriangulo1 = 6;
-// const ladoTriangulo2 = 6;
-// const baseTriangulo = 4;
-// const alturaTriangulo = 5.5;
-// const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
-// const areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
-// console.log(
-// "Los lados del triangulo miden: " 
-// + ladoTriangulo1 + " in, " 
-// + ladoTriangulo2 + " in, " 
-// + baseTriangulo + " in."
-// );
-// console.log("La altura del triangulo es: " + alturaTriangulo + " in")
-// console.log("El perimetro del triangulo es: " + perimetroTriangulo + " in")
-// console.log("El area del triangulo es: " + areaTriangulo + " in^2")
+//Codigo del triangulo=========================================
 
 function perimetroTriangulo(lado1, lado2, base){
-    return lado1 + lado2 + base
+    return lado1 + lado2 + base;
 }
 function areaTriangulo(base, altura){
     return (base * altura) / 2;
 }
-console.groupEnd();
 
-//Codigo circulo
-
-console.group("Circulo");
-
-//Radio
-//Diametro
-// const diametroCirculo = radioCirculo * 2;
-// console.log("El Diametro del circulo es: " + diametroCirculo + " in");
-//Pi
-//Circunferencia
-// const perimetroCirculo = diametroCirculo * PI;
-// console.log("El Perimetro del circulo es: " + perimetroCirculo + " in");
+//Codigo circulo==============================================
 
 const PI = Math.PI;
 
 function diametroCirculo(radio){
     return radio * 2;
 }
-
-
-
 function perimetroCirculo(radio){
     const diametro = diametroCirculo(radio);
     return diametro * PI;
 }
-
-//Area
-// const areaCirculo = (radioCirculo * radioCirculo) * PI;
-// console.log("El Area del circulo es: " + areaCirculo + " in^2");
-
 function areaCirculo(radio){
     return (radio * radio) * PI;
 }
 
-console.groupEnd();
+// Interactuamos con el html=============================================================
+
+// Cuadrado
+function calcularPerimetroCuadrado(){
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+    const perimetro = perimetroCuadrado(value);
+    alert(perimetro)
+}
+
+
+function calcularAreaCuadrado(){
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+    const area = areaCuadrado(value);
+    alert(area)
+}
+
+// Triangulo
+
+function calcularPerimetroTriangulo(){
+    const inputLado1 = parseInt(document.getElementById("InputLado1").value);
+    const inputLado2 = parseInt(document.getElementById("InputLado2").value);
+    const inputBase = parseInt(document.getElementById("InputTrianguloBase").value);
+    
+    
+    const perimetro = perimetroTriangulo(inputLado1, inputLado2, inputBase);
+    alert(perimetro)
+}
+
+function calcularAreaTriangulo(){
+    const inputBase = parseInt(document.getElementById("InputTrianguloBase").value);
+    const inputAltura = parseInt(document.getElementById("InputAlturaTriangulo").value);
+
+    const area = areaTriangulo(inputBase, inputAltura)
+    alert(area)
+}
+
+// Circulo
+
+function calcularDiametroCirculo(){
+    const radio = parseInt(document.getElementById("InputRadio").value)
+    const diametro = diametroCirculo(radio)
+    alert(diametro)
+};
+
+function calcularPerimetroCirculo(){
+    const radio = parseInt(document.getElementById("InputRadio").value)
+    const perimetro = perimetroCirculo(radio)
+    alert(perimetro)
+};
+
+function calcularAreaCirculo(){
+    const radio = parseInt(document.getElementById("InputRadio").value)
+    const area = areaCirculo(radio)
+    alert(area)
+};
