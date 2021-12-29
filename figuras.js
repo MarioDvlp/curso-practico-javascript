@@ -69,6 +69,28 @@ function calcularAreaTriangulo(){
     alert(area)
 }
 
+// Triangulo Isosceles
+
+function TrianguloIsosceles(lado1, lado2, base){
+    const inputLado1 = parseInt(document.getElementById("InputIsosceles1").value);
+    const inputLado2 = parseInt(document.getElementById("InputIsosceles2").value);
+    const inputBase = parseInt(document.getElementById("InputIsoscelesBase").value);
+
+     if (inputLado1 === inputLado2 && inputBase != inputLado1 && inputLado2) {
+        const resultado = calcularAlturaTrianguloIsosceles(inputLado1, inputBase)
+        alert(resultado)
+     } else {
+         alert("Introduce los valores validos para un Triangulo Isosceles")
+     }
+}
+
+function calcularAlturaTrianguloIsosceles(lados, base){
+    const a = lados * lados; 
+    const b = (base * base) / 4;
+    const result = Math.sqrt(a - b);
+    return result;
+}
+
 // Circulo
 
 function calcularDiametroCirculo(){
