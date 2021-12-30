@@ -7,3 +7,10 @@ Repositorio para curso basico de javascript de Platzi
 -Segundo paso: Implemetar las formulas en javascript.</br>
 -Tercer paso: Crear Funciones.</br>
 -Cuarto paso: Integrar JS con HTML.
+
+## Taller #2: Porcentajes y descuentos
+
+-Primer paso: Definir las formulas.</br>
+-Segundo paso: Implemetar las formulas en javascript.</br>
+-Tercer paso: Crear Funciones.</br>
+-Cuarto paso: Integrar JS con HTML.
