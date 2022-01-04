@@ -7,7 +7,24 @@
     <title>Percentage and Discounts | Platzi course</title>
 </head>
 <body>
-    <h1>Hola, Mundo!</h1>
+    <header>
+        <h1>Percents and Discount</h1>
+        <p>This is the Javascript Practical Course</p>
+    </header>
+    <section>
+        <h2>
+            Calculate the price of your product after the discount
+        </h2>
+        <form action="">
+            <label for="InputPrice">Write the price</label>
+            <input id="InputPrice" type="number">
+            <label for="InputDiscount">Discount</label>
+            <input id="InputDiscount" type="number">
+
+            <button type="button" onclick="onClickButtonPriceDiscount()">Calculate discount</button>
+            <p id="finalPriceParagraph"></p>
+        </form>
+    </section>
 <script src="./discounts.js"></script>
 </body>
 </html>

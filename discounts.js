@@ -1,7 +1,3 @@
-// const originalPrice = 120;
-// const discount = 18;
-
-// Functions
 
 function calculateDiscountPrice(price, discount){
     const percentajeWithDiscount = 100 - discount;
@@ -11,16 +7,14 @@ function calculateDiscountPrice(price, discount){
 }
 
 
+function onClickButtonPriceDiscount(){
+    const inputPrice = document.getElementById("InputPrice");
+    const priceValue = inputPrice.value;
+    const inputDiscount = document.getElementById("InputDiscount");
+    const discountValue = inputDiscount.value;
 
+    const finalPrice = calculateDiscountPrice(priceValue, discountValue);
 
-
-
-
-
-
-// console.log({
-//     originalPrice,
-//     discount,
-//     percentajeWithDiscount,
-//     discountPrice
-// })
+    const resultP = document.getElementById("finalPriceParagraph");
+    resultP.innerText = `Your price after discount is $${finalPrice}`
+}
