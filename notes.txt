@@ -1,0 +1,5 @@
+1- Get better de Styles.CCS for the first course
+2- Review the code and the functions in discounts.css
+4- Ready the cupon challenge. 
+5- Add more cupons.
+6- Make better with CSS

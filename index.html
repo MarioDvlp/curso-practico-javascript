@@ -10,84 +10,86 @@
 <body>
     <header>
         <h1>Figuras Geom&eacute;tricas</h1>
-        <p>Este es el primer taller de curso p&aacute;ctico de Javascript</p>
+        <p>Hecho para el primer taller de curso p&aacute;ctico de Javascript</p>
     </header>
 
     <main>
-        <div class="container">
+        <div class="grid-container">
+        <div class="container areaA">
             <h2>Calcula el area y el perimetro de un cuadrado</h2> 
             <form action="">
-                <label for="InputCuadrado">Escribe cuando mide cada lado de tu cuadrado</label>
-                <input id="InputCuadrado" type="number" placeholder=""><br>
-                <button type="button" onclick="calcularPerimetroCuadrado()">
+                <label for="InputCuadrado" class="label">Escribe cuando mide cada lado de tu cuadrado</label>
+                <input id="InputCuadrado" class="input" type="number" placeholder=""><br>
+                <button type="button" class="btn" onclick="calcularPerimetroCuadrado()">
                     Calcular el per&iacute;metro
                 </button>
-                <button type="button" onclick="calcularAreaCuadrado()">
+                <button class="btn" type="button" onclick="calcularAreaCuadrado()">
                     Calcular el area
                 </button>
             </form>
         </div>
 
-        <div class="container">
+        <div class="container areaB">
             <h2>Calcula el area y el perimetro de un Tr&iacute;angulo</h2> 
             <form action="">
-                <label for="InputLado1">Lado 1</label>
-                <input id="InputLado1" type="number" placeholder=""><br>
+                <label for="InputLado1" class="label">Lado 1</label>
+                <input id="InputLado1" class="input" type="number" placeholder=""><br>
 
-                <label for="InputLado2">Lado 2</label>
-                <input id="InputLado2" type="number" placeholder=""><br>
+                <label for="InputLado2" class="label">Lado 2</label>
+                <input id="InputLado2" class="input" type="number" placeholder=""><br>
 
-                <label for="InputTrianguloBase">Base</label>
-                <input id="InputTrianguloBase" type="number" placeholder=""><br>
+                <label for="InputTrianguloBase" class="label">Base</label>
+                <input id="InputTrianguloBase" class="input" type="number" placeholder=""><br>
 
-                <label for="InputAlturaTriangulo">Altura</label>
-                <input id="InputAlturaTriangulo" type="number" placeholder=""><br>
+                <label for="InputAlturaTriangulo" class="label">Altura</label>
+                <input id="InputAlturaTriangulo" class="input" type="number" placeholder=""><br>
 
 
-                <button type="button" onclick="calcularPerimetroTriangulo()">
+                <button type="button" class="btn" onclick="calcularPerimetroTriangulo()">
                     Calcular el per&iacute;metro
                 </button>
-                <button type="button" onclick="calcularAreaTriangulo()">
+                <button type="button" class="btn" onclick="calcularAreaTriangulo()">
                     Calcular el area
                 </button>
             </form>
         </div>
 
-        <div class="container">
+        <div class="container areaC">
             <h2>Calcula el area y el perimetro de un Tr&iacute;angulo isosceles</h2> 
-            <form action="">
-                <label for="InputIsosceles1">Lado 1</label>
-                <input id="InputIsosceles1" type="number" placeholder=""><br>
+            <form action="" >
+                <label for="InputIsosceles1" class="label">Lado 1</label>
+                <input id="InputIsosceles1" class="input" type="number" placeholder=""><br>
 
-                <label for="InputIsosceles2">Lado 2</label>
-                <input id="InputIsosceles2" type="number" placeholder=""><br>
+                <label for="InputIsosceles2" class="label">Lado 2</label>
+                <input id="InputIsosceles2" class="input" type="number" placeholder=""><br>
 
-                <label for="InputIsoscelesBase">Base</label>
-                <input id="InputIsoscelesBase" type="number" placeholder=""><br>
+                <label for="InputIsoscelesBase" class="label">Base</label>
+                <input id="InputIsoscelesBase" class="input" type="number" placeholder=""><br>
 
-                <button type="button" onclick="TrianguloIsosceles()">
+                <button type="button" class="btn" onclick="TrianguloIsosceles()">
                     Calcular Altura
                 </button>
             </form>
         </div>
         
-        <div class="container">
+        <div class="container areaD">
             <h2>Calcula el area y el perimetro de un C&iacute;rculo</h2> 
             <form action="">
-                <label for="InputRadio">Radio del C&iacute;rculo</label>
-                <input id="InputRadio" type="number" placeholder=""><br>
+                <label for="InputRadio" class="label">Radio del C&iacute;rculo</label>
+                <input id="InputRadio" class="input" type="number" placeholder=""><br>
 
-                <button type="button" onclick="calcularDiametroCirculo()">
+                <button type="button" class="btn" onclick="calcularDiametroCirculo()">
                     Calcular el Di&aacute;metro
                 </button>
-                <button type="button" onclick="calcularPerimetroCirculo()">
+                <button type="button" class="btn" onclick="calcularPerimetroCirculo()">
                     Calcular el per&iacute;metro
                 </button>
-                <button type="button" onclick="calcularAreaCirculo()">
+                <button type="button" class="btn" onclick="calcularAreaCirculo()">
                     Calcular el &aacute;rea
                 </button>
             </form>
         </div>
+    </div>
     </main>
 
     <script src="figuras.js"></script>
