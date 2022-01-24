@@ -38,7 +38,8 @@ function calcularPerimetroCuadrado(){
     const input = document.getElementById("InputCuadrado");
     const value = input.value;
     const perimetro = perimetroCuadrado(value);
-    alert(perimetro)
+    document.getElementById("resultCuadrado").innerHTML = `El permetro del cuadrado es:<br> <span>${perimetro}</span>`
+     
 }
 
 
@@ -46,7 +47,7 @@ function calcularAreaCuadrado(){
     const input = document.getElementById("InputCuadrado");
     const value = input.value;
     const area = areaCuadrado(value);
-    alert(area)
+    document.getElementById("resultCuadrado").innerHTML = `El area del cuadrado es:<br> <span>${area}</span>`
 }
 
 // Triangulo
@@ -58,7 +59,7 @@ function calcularPerimetroTriangulo(){
     
     
     const perimetro = perimetroTriangulo(inputLado1, inputLado2, inputBase);
-    alert(perimetro)
+    document.getElementById("resultTriangulo").innerHTML = `El area del area del perimetro es:<br> <span>${perimetro}</span>`
 }
 
 function calcularAreaTriangulo(){
@@ -66,7 +67,7 @@ function calcularAreaTriangulo(){
     const inputAltura = parseInt(document.getElementById("InputAlturaTriangulo").value);
 
     const area = areaTriangulo(inputBase, inputAltura)
-    alert(area)
+    document.getElementById("resultTriangulo").innerHTML = `El area del area del triangulo es:<br> <span>${area}</span>`
 }
 
 // Triangulo Isosceles
@@ -77,8 +78,8 @@ function TrianguloIsosceles(lado1, lado2, base){
     const inputBase = parseInt(document.getElementById("InputIsoscelesBase").value);
 
      if (inputLado1 === inputLado2 && inputBase != inputLado1 && inputLado2) {
-        const resultado = calcularAlturaTrianguloIsosceles(inputLado1, inputBase)
-        alert(resultado)
+        const resultado = calcularAlturaTrianguloIsosceles(inputLado1, inputBase).toFixed(2)
+        document.getElementById("resultIsosceles").innerHTML = `La altura de tu triangulo isosceles es:<br><span>${resultado}</span>`
      } else {
          alert("Introduce los valores validos para un Triangulo Isosceles")
      }
@@ -95,18 +96,18 @@ function calcularAlturaTrianguloIsosceles(lados, base){
 
 function calcularDiametroCirculo(){
     const radio = parseInt(document.getElementById("InputRadio").value)
-    const diametro = diametroCirculo(radio)
-    alert(diametro)
+    const diametro = diametroCirculo(radio).toFixed(2)
+    document.getElementById("resultCirculo").innerHTML = `El Diametro de tu circulo es:<br><span>${diametro}</span>`
 };
 
 function calcularPerimetroCirculo(){
     const radio = parseInt(document.getElementById("InputRadio").value)
-    const perimetro = perimetroCirculo(radio)
-    alert(perimetro)
+    const perimetro = perimetroCirculo(radio).toFixed(2)
+    document.getElementById("resultCirculo").innerHTML = `El Perimetro de tu circulo es:<br><span>${perimetro}</span>`
 };
 
 function calcularAreaCirculo(){
     const radio = parseInt(document.getElementById("InputRadio").value)
-    const area = areaCirculo(radio)
-    alert(area)
+    const area = areaCirculo(radio).toFixed(2)
+    document.getElementById("resultCirculo").innerHTML = `El Area de tu circulo es:<br><span>${area}</span>`
 };

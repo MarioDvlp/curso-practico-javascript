@@ -50,13 +50,13 @@ main {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 50rem);
+    grid-template-rows: repeat(2, auto);
     row-gap: 4rem;
     column-gap: 2.5rem;
     width: 100%;
     max-width: 140rem;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 4rem;
     grid-template-areas: 
     "a b"
     "c d";
@@ -143,6 +143,25 @@ main {
     text-decoration: none;
   }
 
+  .respuesta {
+      font-size: 2rem;
+      font-weight: 900;
+      width: 50%;
+      height: 100px;
+      text-align: center;
+      margin: 15px auto;
+      color: #333;
+  }
+  .respuesta span {
+      position: relative;
+      font-size: 3rem;
+      line-height: 5rem;
+      padding: 2px 10px;
+      border-radius: 15px;
+      color: white;
+      background-color: #478978;
+
+  }
 
 /* =========================================================================== */
 @media (max-width: 768px) {
@@ -154,6 +173,7 @@ main {
         "b"
         "c"
         "d";
+        justify-content: center;
     }
     .container h2 {
         font-size: 2rem;
